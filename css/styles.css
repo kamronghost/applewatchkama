@@ -1,6 +1,7 @@
-/* CUSTOM PROPS */
+/* --------------------------------------------------------------CUSTOM PROPS-------------------------------------------------------------- */
 :root{
   --primary: #ea625c;
+  --primary-dark: #c9514c;
   --text-color: #333;
 }
 
@@ -34,17 +35,17 @@ body{
   color: #222;
 }
 
-img{
+/* img{
   min-width: 100%;
   height: auto;
-}
+} */
 
 *:focus{
   outline: 2px dashed var(--primary);
   outline-offset: 2px;
 }
 
-/* CONTAINER */
+/* ------------------------------------------------------------------CONTAINER------------------------------------------------------------------ */
 .container{
   width: 100%;
   max-width: 1100px;
@@ -55,15 +56,63 @@ img{
 }
 
 
+/* ------------------------------------------------------------------BUTTON------------------------------------------------------------------ */
+.button{
+  display: inline-block;
+  min-width: 260px;
+  padding: 12px 38px;
+  border: 0;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
 
-/* Main Content */
+.button:hover{
+  background-color: var(--primary-dark);
+}
+
+.button:active{
+  opacity: 0.6;
+}
+
+/* ------------------------------------------------------------------LINED BUTTON------------------------------------------------------------------ */
+.lined-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.lined-link::before {
+  width: 40px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: var(--primary);
+  content: "";
+  transition: width 0.3s ease;
+}
+
+.lined-link:hover::before{
+  width: 60px;
+}
+
+/* ------------------------------------------------------------------Main Content------------------------------------------------------------------ */
 .main-content{
   flex-grow: 1;
 }
 
 
 
-/* Header */
+/* ------------------------------------------------------------------Header------------------------------------------------------------------ */
 .site-header {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -93,9 +142,9 @@ img{
   height: 42px;
   object-fit: contain;
 }
+/* ------------------------------------------------------------------END HEADER------------------------------------------------------------------ */
 
-
-/* SITENAV */
+/* ------------------------------------------------------------------SITENAV------------------------------------------------------------------ */
 .sitenav {
   margin-right: 40px;
 }
@@ -129,10 +178,7 @@ img{
   border-bottom: 3px solid #333;
 }
 
-/* SEARCH FORM */
-.search-form {
-
-}
+/* ------------------------------------------------------------------SEARCH FORM------------------------------------------------------------------ */
 
 .search-form-input {
   padding-top: 6px;
@@ -140,3 +186,158 @@ img{
   border: 0;
   border-bottom: 1px solid #333;
 }
+
+/* ------------------------------------------------------------------MAIN CONTENT------------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------------HERO------------------------------------------------------------------ */
+.hero{
+  padding-top: 140px;
+  padding-bottom: 185px;
+  border-bottom: 2px solid #ddd;
+  background-image: url(../img/intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 550px) bottom;
+}
+
+/* ---------------------------------------------------------------LEAD CTA--------------------------------------------------------------- */
+.lead-cta{
+  width: 100%;
+  max-width: 490px;
+}
+
+
+.lead-cta-heading{
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #222;
+}
+
+.lead-cta-white .lead-cta-heading{
+  color: #fff;
+}
+
+.lead-cta-text{
+  padding-left: 37px;
+  border-left: 3px solid #888;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #777; 
+}
+
+.lead-cta-white .lead-cta-text{
+  color: #fff;
+  border-color: #fff;
+} 
+
+/* -----------------------------------------------------------------------END CTA----------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------FEATURES SECTION------------------------------------------------------------------ */
+.features {
+  padding-top: 70px;
+  padding-bottom: 70px; 
+}
+
+.features-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.features-item {
+  width: 280px;
+}
+
+.features-item:not(:last-child){
+  margin-right: 80px;
+}
+
+.features-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.features-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.features-divider {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  margin: 0;
+  background-color: #ddd;
+  box-shadow: 16px 0 0 0 #ddd,
+    32px 0 0 0 #ddd;  
+}
+/* -----------------------------------------------------------------END FEATURES----------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------PROMO CTA-------------------------------------------------------------------- */
+.promo {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.promo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------------------------END PROMO CTA------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------RUNNERS--------------------------------------------------------------------- */
+.runners {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url(../img/runners.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.runners-lead-cta {
+  margin-left: auto;
+}
+
+/* ------------------------------------------------------------------END RUNNERS------------------------------------------------------------------ */
+
+
+
+/* -------------------------------------------------------------------BG RETINA------------------------------------------------------------------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .hero{
+      background-image: url(../img/intro-bg@2x.jpg);
+    }
+    .runners{
+      background-image: url(../img/runners@2x.jpg);
+    }
+}
+
+
+/* -----------------------------------------------------------------END BG RETINA----------------------------------------------------------------- */
